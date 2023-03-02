@@ -340,12 +340,12 @@ static bool do_it(int argc, char *argv[])
 
 static bool do_remove(int option, int argc, char *argv[])
 {
-    // option 0 is for remove head; option 1 is for remove tail
+// option 0 is for remove head; option 1 is for remove tail
 
-    /* FIXME: It is known that both functions is_remove_tail_const() and
-     * is_remove_head_const() can not pass dudect on Apple M1 (based on Arm64).
-     * We shall figure out the exact reasons and resolve later.
-     */
+/* FIXME: It is known that both functions is_remove_tail_const() and
+ * is_remove_head_const() can not pass dudect on Apple M1 (based on Arm64).
+ * We shall figure out the exact reasons and resolve later.
+ */
 #if !(defined(__aarch64__) && defined(__APPLE__))
     if (simulation) {
         if (argc != 1) {

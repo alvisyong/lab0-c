@@ -57,9 +57,7 @@ void report_event(message_t msg, char *fmt, ...)
     bool fatal = msg == MSG_FATAL;
     // cppcheck-suppress constVariable
     static char *msg_name_text[N_MSG] = {
-        "WARNING",
-        "ERROR",
-        "FATAL ERROR",
+        "WARNING", "ERROR", "FATAL ERROR",
     };
     char *msg_name = msg_name_text[2];
     if (msg < N_MSG)
